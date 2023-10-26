@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun With Button</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    
+    <main class="home">
+        <header>
+                <nav>
+                    <a href="#" class="logo">RK</a>
+                    <a href="#"><i class='bx bx-moon'></i></a>
+                </nav>
+        </header>
+
+         <div class="content">
+            <div class="left">
+                <h1>
+                    Are You Ready For <span>Fun</span>
+                </h1>
+                <div class="btn">
+                    <button>Yes</button>
+                    <button>No</button>
+                </div>
+            </div>
+            <div class="right">
+                <model-viewer src="./model/robot_playground.glb"  camera-controls shadow-intensity="1" disable-zoom autoplay ></model-viewer>
+            </div>
+         </div>
+    </main>
+
+</body>
+</html>
