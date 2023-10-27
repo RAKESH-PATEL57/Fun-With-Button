@@ -12,19 +12,20 @@
 {
     --alpha-color:rgb(0, 221, 255);
     /* --bg-color:linear-gradient(50deg,rgb(0, 0, 0),blue,aqua); */
-    --bg-color:rgb(255, 255, 255);
+    --fisrtpage-bg-color:rgb(7, 15, 46);
     --logo-color:rgb(0, 221, 255);
-    --font-color:rgb(246, 1, 1);
+    --font-color:rgb(255, 255, 255);
 }
 
 .darkmoodbtn
 {
     --alpha-color:rgb(0, 221, 255);
     /* --bg-color:linear-gradient(50deg,rgb(0, 0, 0),blue,aqua); */
-    --bg-color:rgb(7, 15, 46);
+    --bg-color:rgb(0, 0, 0);
     --logo-color:rgb(0, 221, 255);
     --font-color:rgb(246, 1, 1);
 }
+
 
 html, body
 {
@@ -33,18 +34,17 @@ html, body
 
 .home
 {
-    background: var(--bg-color);
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    background: var(--fisrtpage-bg-color);
 }
 
 .home .firstpage
 {
-
-    /* border: 2px solid red; */
     width: 95%;
+    display: none;
 }
 
 .home header
@@ -77,7 +77,14 @@ header .logo
 
 header a i
 {
-    color: var(--logo-color);
+    color: var(--logo-color);  
+    transition: .4s;
+}
+
+header a i:hover
+{
+    transform: rotate(360deg);
+    color: red;
 }
 
 .content
@@ -91,8 +98,9 @@ header a i
 
 .content .left
 {
-    margin-left: 3rem;
+    /* margin-left: 3rem; */
     /* border: 2px solid red; */
+    width:50vw;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -124,7 +132,7 @@ header a i
     font-weight: 800;
 }
 
-.btn
+.left .btn
 {
     /* border: 2px solid red; */
     display: flex;
@@ -159,4 +167,60 @@ header a i
     /* width: 30rem; */
     height: 70vh;
     width: 30vw;
+}
+
+
+.secondpage
+{
+    position: absolute;
+    z-index: 100;
+    /* border:2px solid red; */
+    width: 95%;
+}
+
+.secondpage .secondpageContent
+{
+    border: 2px solid aqua;
+    height: 90%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.secondpageContent h1
+{
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--font-color);
+    font-family: 'Redressed', cursive;
+    /* border: 2px solid purple; */
+}
+
+
+.secondpageContent h1 span
+{
+    font-family: 'Redressed', cursive;
+    color: var(--alpha-color);
+    font-size: 6rem;
+    text-shadow:0 0 10px var(--alpha-color),
+                0 0 15px var(--alpha-color),
+                0 0 20px var(--alpha-color);
+    -webkit-text-stroke-width: .1px;
+    -webkit-text-stroke-color: rgb(11, 16, 16 , 13);
+   
+    font-weight: 800;
+}
+
+.secondpage .btn
+{
+    /* border:2px solid red; */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    height: 100%;
 }
