@@ -19,23 +19,43 @@ secondBtn.addEventListener('mouseover', function() {
 
 
 
+//**********************           / Dark Mood section   **************************
+
+
 let darkMoodBtn = document.querySelector('.darkmood');
 var rk = 0;
 darkMoodBtn.onclick = () => {
   
     if(rk==0)
     {
-        darkMoodBtn.classList.add('darkmoodbtn');
+        document.body.classList.add('darkmoodbtn');
         rk = 1;
     }
 
     else
     {
-        darkMoodBtn.classList.remove('darkmoodbtn');
+        document.body.classList.remove('darkmoodbtn');
         rk = 0;
     }
     
 }
+
+
+
+
+// second page   ******************
+
+let secondPageBtn = document.querySelector('.buttons');
+
+
+secondPageBtn.onclick = () => {
+    
+    secondPageBtn.classList.add('show');
+}
+
+secondPageBtn.addEventListener('onclick',function() {
+    console.log("rakesh");
+});
 
 
 
