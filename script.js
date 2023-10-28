@@ -86,8 +86,8 @@ button.prepend(element);
 console.log(element);
 
 // move elements randomly across x and y direction  
-element.style.left = cursor.getBoundingClientRect().x - 35 + 'px';
-element.style.top = cursor.getBoundingClientRect().y - 10 + 'px';
+element.style.left = cursor.getBoundingClientRect().x -30 + 'px';
+element.style.top = cursor.getBoundingClientRect().y - 368 + 'px';
 
 setTimeout(function() {
     let text = document.querySelectorAll('.element')[0],

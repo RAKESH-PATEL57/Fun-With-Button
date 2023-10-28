@@ -227,13 +227,15 @@ header a i:hover
     justify-content: center;
     gap: 2rem;
     height: 100%;
+    position: relative;
+    overflow: hidden;
 }
 
 #cursor
 {
     position: fixed;
-    width: 25px;
-    height: 25px;
+    /* width: 25px; */
+    /* height: 25px; */
     /* border-top: 5px solid #0f0; */
     /* border-left: 5px solid #0f0; */
     transform-origin: top;
@@ -247,7 +249,8 @@ header a i:hover
 {
     content: '';
     position: absolute;
-    left: -2.5px;
+    left: 0;
+    top: 0;
     width: 5px;
     height: 40px;
     /* background: #0f0; */
