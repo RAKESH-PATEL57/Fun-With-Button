@@ -33,6 +33,7 @@ secondBtn.onclick = () => {
 Logo.onclick = () => {
     secondPage.classList.remove('show');
     FirstPage.classList.remove('active');
+    console.log('rakesh');
 }
 
 
@@ -40,7 +41,7 @@ Logo.onclick = () => {
 //**********************           / Dark Mood section   **************************
 
 
-let darkMoodBtn = document.querySelector('.darkmood');
+let darkMoodBtn = document.querySelectorAll('.darkmood');
 var rk = 0;
 darkMoodBtn.onclick = () => {
   

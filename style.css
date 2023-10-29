@@ -11,7 +11,7 @@
 :root
 {
     --alpha-color:rgb(0, 221, 255);
-    /* --bg-color:linear-gradient(50deg,rgb(0, 0, 0),blue,aqua); */
+    --bg-color:linear-gradient(50deg,rgb(0, 0, 0),blue,aqua);
     --fisrtpage-bg-color:rgb(7, 15, 46);
     --logo-color:rgb(0, 221, 255);
     --font-color:rgb(255, 255, 255);
@@ -46,6 +46,11 @@ html, body
 .home .firstpage
 {
     width: 95%;
+    display: block;
+}
+
+.firstpage.active
+{
     display: none;
 }
 
@@ -171,13 +176,19 @@ header a i:hover
     width: 30vw;
 }
 
-
 .secondpage
 {
     position: absolute;
     z-index: 100;
     /* border:2px solid red; */
     width: 95%;
+    display: none;
+    transition: .3s ease-in-out;
+}
+
+.secondpage.show
+{
+    display: block;
 }
 
 .secondpage .secondpageContent
