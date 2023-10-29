@@ -1,5 +1,8 @@
 let firstBtn = document.querySelector('.fisrtbtn');
 let secondBtn = document.querySelector('.secondbtn');
+let secondPage = document.querySelector('.secondpage');
+let FirstPage = document.querySelector('.firstpage');
+let Logo = document.querySelector('.logo');
 
 let toggle = 0;
 
@@ -16,6 +19,21 @@ secondBtn.addEventListener('mouseover', function() {
         secondBtn.innerHTML='Yes';
     }
 });
+
+firstBtn.onclick = () => {
+    secondPage.classList.add('show');
+    FirstPage.classList.add('active');
+}
+
+secondBtn.onclick = () => {
+    secondPage.classList.add('show');
+    FirstPage.classList.add('active');
+}
+
+Logo.onclick = () => {
+    secondPage.classList.remove('show');
+    FirstPage.classList.remove('active');
+}
 
 
 
@@ -43,27 +61,6 @@ darkMoodBtn.onclick = () => {
 
 
 
-// second page   ******************
-
-let secondPageBtn = document.querySelector('.buttons');
-
-
-secondPageBtn.onclick = () => {
-    
-    secondPageBtn.classList.add('show');
-}
-
-secondPageBtn.addEventListener('onclick',function() {
-  
-});
-
-
-
-
-
-
-
-
 // cusrsor Selection   ********************
 
 let div = document.querySelector('#cursor');
@@ -80,11 +77,10 @@ element.className = 'element';
 button.prepend(element);
 
 // move elements randomly across x and y direction  
-// element.style.left = cursor.getBoundingClientRect().x - 40 + 'px';
-// element.style.right = cursor.getBoundingClientRect().y + 40 + 'px';
+element.style.left = cursor.getBoundingClientRect().x - 40 + 'px';
+element.style.right = cursor.getBoundingClientRect().y + 40 + 'px';
 element.style.top = cursor.getBoundingClientRect().y - 368 + 'px';
 element.style.right = cursor.getBoundingClientRect().x + 368 + 'px';
-console.log(element.style.top);
 
 setTimeout(function() {
     let text = document.querySelectorAll('.element')[0],
