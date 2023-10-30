@@ -21,9 +21,10 @@
 {
     --alpha-color:rgb(0, 221, 255);
     /* --bg-color:linear-gradient(50deg,rgb(0, 0, 0),blue,aqua); */
+    --fisrtpage-bg-color:rgb(0, 0, 0);
     --bg-color:rgb(0, 0, 0);
     --logo-color:rgb(0, 221, 255);
-    --font-color:rgb(246, 1, 1);
+    --font-color:rgb(255, 255, 255);
 }
 
 
@@ -103,19 +104,18 @@ header a i:hover
     height: 90vh;
 }
 
-.content .left
+.content .firstpageContent
 {
-    /* margin-left: 3rem; */
-    /* border: 2px solid red; */
-    width:50vw;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+     /* border: 2px solid aqua; */
+     height: 90%;
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap: 2rem;
 }
 
-.left h1
+.firstpageContent h1
 {
     font-size: 4.5rem;
     width: 80%;
@@ -125,7 +125,10 @@ header a i:hover
     /* border: 2px solid red; */
 }
 
-.left h1 span
+
+
+
+.firstpageContent h1 span
 {
     font-family: 'Redressed', cursive;
     color: var(--alpha-color);
@@ -146,6 +149,47 @@ header a i:hover
     justify-content: space-between;
     width: 50%;
     position: relative;
+}
+
+
+.firstpageContent h1
+{
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--font-color);
+    font-family: 'Redressed', cursive;
+}
+
+
+.firstpageContent h1 span
+{
+    font-family: 'Redressed', cursive;
+    color: var(--alpha-color);
+    font-size: 6rem;
+    text-shadow:0 0 10px var(--alpha-color),
+                0 0 15px var(--alpha-color),
+                0 0 20px var(--alpha-color);
+    -webkit-text-stroke-width: .1px;
+    -webkit-text-stroke-color: rgb(11, 16, 16 , 13);
+   
+    font-weight: 800;
+}
+
+.firstpage .btn
+{
+    border:2px solid aquamarine;
+    box-shadow: 0px 0px 10px var(--alpha-color),
+               inset 0px 0px 10px var(--alpha-color);
+    border-radius: 1rem;           
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
 }
 
 .btn button
@@ -183,12 +227,12 @@ header a i:hover
     /* border:2px solid red; */
     width: 95%;
     display: none;
-    transition: .3s ease-in-out;
 }
 
 .secondpage.show
 {
-    display: block;
+    transition: .3s ease-in-out;
+    display: block;  
 }
 
 .secondpage .secondpageContent
@@ -248,7 +292,7 @@ header a i:hover
 
     transform: translate(-1px,5px) rotate(15deg) scale(0);
     transition: transform 0.1s;
-    pointer-events: none;
+    /* pointer-events: none; */
     
     /* filter: drop-shadow(0 0 5px #0f0) drop-shadow(0 0 5px #0f0) drop-shadow(0 0 5px #0f0) hue-rotate(60deg); */
 }
