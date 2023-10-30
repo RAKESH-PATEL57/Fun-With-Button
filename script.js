@@ -2,7 +2,7 @@ let firstBtn = document.querySelector('.fisrtbtn');
 let secondBtn = document.querySelector('.secondbtn');
 let secondPage = document.querySelector('.secondpage');
 let FirstPage = document.querySelector('.firstpage');
-let Logo = document.querySelector('.logo');
+let Logo = document.querySelector('#sclogo');
 
 let toggle = 0;
 
@@ -41,22 +41,36 @@ Logo.onclick = () => {
 //**********************           / Dark Mood section   **************************
 
 
-let darkMoodBtn = document.querySelectorAll('.darkmood');
+let darkMoodBtn = document.querySelector('#frdrk');
 var rk = 0;
-darkMoodBtn.onclick = () => {
-  
+darkMoodBtn.onclick = () => {  
     if(rk==0)
     {
-        document.btn.classList.add('darkmoodbtn');
+        document.body.classList.add('darkmoodbtn');
         rk = 1;
     }
 
     else
     {
-        document.btn.classList.remove('darkmoodbtn');
+        document.body.classList.remove('darkmoodbtn');
         rk = 0;
+    }   
+}
+
+let scdarkMoodBtn = document.querySelector('#scdrk');
+
+scdarkMoodBtn.onclick = () => {  
+    if(rk==0)
+    {
+        document.body.classList.add('darkmoodbtn');
+        rk = 1;
     }
-    
+
+    else
+    {
+        document.body.classList.remove('darkmoodbtn');
+        rk = 0;
+    }   
 }
 
 
